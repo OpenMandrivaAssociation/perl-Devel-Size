@@ -1,7 +1,7 @@
 %define module	Devel-Size
 %define name	perl-%{module}
 %define version	0.69
-%define	release	%mkrel 2
+%define	release	%mkrel 4
 
 Name:		%{name}
 Version:	%{version}
