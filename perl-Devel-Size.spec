@@ -1,18 +1,18 @@
-%define module	Devel-Size
-%define name	perl-%{module}
-%define version	0.71
-%define	release	%mkrel 1
+%define upstream_name	 Devel-Size
+%define upstream_version 0.71
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Find the memory usage of Perl variables
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source0:	%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Devel/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	perl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module figures out the real sizes of Perl variables in bytes. Call
@@ -21,7 +21,7 @@ variable is a plain scalar it returns the size of the scalar. If the variable
 is a hash or an array, use a reference when calling.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
@@ -43,5 +43,3 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/Devel/*
 %{perl_vendorarch}/auto/Devel/*
 %{_mandir}/*/*
-
-
