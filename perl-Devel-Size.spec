@@ -1,14 +1,14 @@
 %define modname	Devel-Size
-%define modver	0.71
+%define modver 0.79
 
 Summary:	Find the memory usage of Perl variables
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	11
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Devel/%{modname}-%{modver}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/Devel/Devel-Size-%{modver}.tar.gz
 BuildRequires:	perl-devel
 
 %description
@@ -35,4 +35,5 @@ is a hash or an array, use a reference when calling.
 %{perl_vendorarch}/Devel/*
 %{perl_vendorarch}/auto/Devel/*
 %{_mandir}/man3/*
+
 
