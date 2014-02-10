@@ -31,7 +31,7 @@ is a hash or an array, use a reference when calling.
 %makeinstall_std
 
 %files
-%doc CHANGES SIGNATURE
+%doc CHANGES 
 %{perl_vendorarch}/Devel/*
 %{perl_vendorarch}/auto/Devel/*
 %{_mandir}/man3/*
