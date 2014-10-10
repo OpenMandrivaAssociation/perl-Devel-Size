@@ -9,6 +9,9 @@ License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Devel/Devel-Size-%{modver}.tar.gz
+Patch1:		Devel-Size-0.79-RT-88180-sv_magical.patch
+Patch2:		Devel-Size-0.79-RT-88182-magic_read_shrink.patch
+Patch3:		Devel-Size-0.79-RT-95496-perl5.20-ook.patch
 BuildRequires:	perl-devel
 
 %description
@@ -19,6 +22,7 @@ is a hash or an array, use a reference when calling.
 
 %prep
 %setup -qn %{modname}-%{modver}
+%apply_patches
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
