@@ -12,6 +12,7 @@ Source0:	http://www.cpan.org/modules/by-module/Devel/Devel-Size-%{modver}.tar.gz
 Patch1:		Devel-Size-0.79-RT-88180-sv_magical.patch
 Patch2:		Devel-Size-0.79-RT-88182-magic_read_shrink.patch
 Patch3:		Devel-Size-0.79-RT-95496-perl5.20-ook.patch
+BuildRequires:	perl(Test::More)
 BuildRequires:	perl-devel
 
 %description
