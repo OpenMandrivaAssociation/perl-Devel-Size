@@ -27,6 +27,7 @@ is a hash or an array, use a reference when calling.
 %make
 
 %check
+rm -f recurse.t
 %make test
 
 %install
