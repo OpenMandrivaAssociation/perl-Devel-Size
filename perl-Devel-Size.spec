@@ -1,17 +1,14 @@
 %define modname	Devel-Size
-%define modver 0.79
+%define modver 0.81
 
 Summary:	Find the memory usage of Perl variables
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	8
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Devel/Devel-Size-%{modver}.tar.gz
-Patch1:		Devel-Size-0.79-RT-88180-sv_magical.patch
-Patch2:		Devel-Size-0.79-RT-88182-magic_read_shrink.patch
-Patch3:		Devel-Size-0.79-RT-95496-perl5.20-ook.patch
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl-devel
 
