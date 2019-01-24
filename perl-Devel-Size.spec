@@ -21,13 +21,13 @@ is a hash or an array, use a reference when calling.
 %prep
 %setup -qn %{modname}-%{modver}
 %apply_patches
+rm -f t/recurse.t
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
-rm -f recurse.t
 %make test
 
 %install
