@@ -20,7 +20,7 @@ is a hash or an array, use a reference when calling.
 
 %prep
 %setup -qn %{modname}-%{modver}
-%apply_patches
+%autopatch -p1
 rm -f t/recurse.t
 
 %build
